@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+    body {
+        font-family: Cambria;
+        height: 100%;
+        background-image:url("https://intersectiq.com/assets/images/blogs/6/cover.jpg");
+    }
+    
+    </style>
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <font size="+4">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><center>This X-Ray is predicted to have Pneumonia, Please Consult Doctor.</center></div>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>This X-Ray does not have Pneumonia.</center></div>
+            {% endif %}
+        </font>
+        <div style="border-radius: 10px; background: rgb(169, 243, 227); padding:  10px;">
+            <font size="+3"><p>For Enquiry please Contact :</font><br><br>
+            <a href="https://sanchetihospital.org/?utm_source=gmb&utm_medium=organic&utm_campaign=home">Sancheti Hospital,Pune</a>
+           <br> <a href="https://www.jehangirhospital.com/">Jehangir Hospital,Pune</a>
+           <br><a href="https://www.manipalhospitals.com/kharadi/">Manipal Hospital,Pune</a>
+           <br><a href="https://www.kkhospitalpune.in/">KK Hospital,Pune</a>
+           <br><a href="https://sahyadrihospital.com/nagar-road/?utm_source=Google&utm_medium=Organic&utm_campaign=GMB">Sahyadri Hospital,Pune</a>
+
+        </p></div>
+        </div></center>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
